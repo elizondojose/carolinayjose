@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda | Save the Date</title>
+    <meta property="og:title" content="Carolina & Jose | Nuestra Boda">
+    <meta property="og:description" content="Nos casamos el 29 de Agosto 2026 en Santiago, N.L. ¡Acompáñanos!">
+    
+    <meta property="og:image" content="https://tu-usuario.github.io/boda-web/img/preview-boda.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    
+    <meta property="og:url" content="https://tu-usuario.github.io/boda-web/">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/png" href="img/logo-boda.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    
+    <style>
+        /* Estilos Personalizados */
+        body {
+            font-family: 'Georgia', serif; /* Tipografía elegante */
+            padding-top: 56px; /* Para que el menú no tape el contenido al inicio */
+        }
+        
+        /* Sección de Portada (Hero) */
+        .hero-section {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/portada01.jpg'); /* AQUÍ IRÁ TU FOTO DE FONDO */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #5a5a5a;
+        }
+    </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container">
+            
+            <a class="navbar-brand p-0" href="#inicio">
+                <img src="img/logoboda.png" alt="Logo" class="logo-img">
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#itinerario">Itinerario</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#hospedaje">Hospedaje</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#regalos">Regalos</a></li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a class="btn-rsvp" href="#rsvp">Confirmar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+        <div class="text-center">
+            <img src="img/logobodabco.png" alt="Carolina y Jose" class="hero-logo mb-4" data-aos="zoom-in">
+            <h1 class="display-1 fw-bold text-white" data-aos="fade-up" data-aos-delay="100">Carolina & Jose</h1> <p class="lead fs-2 text-white" data-aos="fade-up" data-aos-delay="200">¡Nos Casamos!</p>
+            <p class="fs-4 mb-4">29 de Agosto, 2026</p> <div id="countdown" class="row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="300">
+                <div class="col-3 col-md-2">
+                    <div class="countdown-item">
+                        <span id="dias" class="countdown-number fw-bold">00</span>
+                        <p class="text-uppercase small">Días</p>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2">
+                    <div class="countdown-item">
+                        <span id="horas" class="countdown-number fw-bold">00</span>
+                        <p class="text-uppercase small">Hrs</p>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2">
+                    <div class="countdown-item">
+                        <span id="minutos" class="countdown-number fw-bold">00</span>
+                        <p class="text-uppercase small">Min</p>
+                    </div>
+                </div>
+                <div class="col-3 col-md-2">
+                    <div class="countdown-item">
+                        <span id="segundos" class="countdown-number fw-bold">00</span>
+                        <p class="text-uppercase small">Seg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="historia" class="text-center bg-white">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Nuestra Historia</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-md-8" data-aos="zoom-in" data-aos-delay="200">
+                    <p class="lead">
+                        Todo comenzó en una cafetería... (Aquí va tu texto).
+                        Al agregar 'data-aos-delay', hacemos que el texto espere 
+                        un poquito después del título para aparecer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="bg-white">
+        <div class="container-fluid px-lg-5"> <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-down">Nuestros Momentos</h2>
+                <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Un poco de nuestra historia en imágenes</p>
+            </div>
+    
+            <div class="masonry-gallery" data-aos="fade-up" data-aos-delay="200">
+                
+                <div class="masonry-item">
+                    <a href="https://via.placeholder.com/600x800" data-lightbox="boda-gallery" data-title="Nuestra primera cita">
+                        <img src="https://via.placeholder.com/600x800" alt="Foto 1" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay"><i class="bi bi-heart-fill"></i></div>
+                    </a>
+                </div>
+    
+                <div class="masonry-item">
+                    <a href="https://via.placeholder.com/800x600" data-lightbox="boda-gallery" data-title="El viaje a la playa">
+                        <img src="https://via.placeholder.com/800x600" alt="Foto 2" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay"><i class="bi bi-heart-fill"></i></div>
+                    </a>
+                </div>
+    
+                <div class="masonry-item">
+                    <a href="https://via.placeholder.com/600x900" data-lightbox="boda-gallery" data-title="Diciendo que Sí">
+                        <img src="https://via.placeholder.com/600x900" alt="Foto 3" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay"><i class="bi bi-heart-fill"></i></div>
+                    </a>
+                </div>
+    
+                <div class="masonry-item">
+                    <a href="https://via.placeholder.com/600x600" data-lightbox="boda-gallery" data-title="Cena de compromiso">
+                        <img src="https://via.placeholder.com/600x600" alt="Foto 4" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay"><i class="bi bi-heart-fill"></i></div>
+                    </a>
+                </div>
+    
+                <div class="masonry-item">
+                    <a href="https://via.placeholder.com/600x850" data-lightbox="boda-gallery" data-title="Con nuestra mascota">
+                        <img src="https://via.placeholder.com/600x850" alt="Foto 5" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay"><i class="bi bi-heart-fill"></i></div>
+                    </a>
+                </div>
+                
+                <div class="masonry-item">
+                    <a href="https://via.placeholder.com/800x500" data-lightbox="boda-gallery" data-title="Save the Date">
+                        <img src="https://via.placeholder.com/800x500" alt="Foto 6" class="img-fluid rounded shadow-sm">
+                        <div class="gallery-overlay"><i class="bi bi-heart-fill"></i></div>
+                    </a>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="ubicacion" class="bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Ubicación</h2>
+                <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Quinta San Jorge, Santiago, N.L.
+                </p>
+            </div>
+    
+            <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="200">
+                <div class="col-lg-10">
+                    <div class="ratio ratio-21x9 shadow-lg rounded-4 overflow-hidden border">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.199162467135!2d-100.1774745256134!3d25.465024320802446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662c953b1e749f5%3A0x338432ecb4867b70!2sLa%20Herencia%20Monterrey!5e0!3m2!1ses-419!2smx!4v1767605941550!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="https://maps.app.goo.gl/VzL8Ff21wfkAdWEa6" target="_blank" class="btn btn-outline-primary rounded-pill px-4">
+                            <i class="bi bi-map-fill me-2"></i> Abrir en Waze / Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="itinerario" class="bg-light overflow-hidden">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Itinerario</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Sábado, 29 de Agosto 2026<br>
+                    <i class="bi bi-geo-alt-fill text-danger"></i> La Herencia Monterrey
+                </p>
+                <a href="https://maps.app.goo.gl/FoSntCVr4cUfkeCu5" target="_blank" class="btn btn-outline-dark btn-sm mt-2" data-aos="zoom-in">Ver Ubicación en Mapa</a>
+            </div>
+    
+            <div class="timeline position-relative">
+                <div class="row g-0 align-items-center mb-5 timeline-row">
+                    <div class="col-md-5 text-md-end text-center pe-md-4" data-aos="fade-right">
+                        <h3 class="h4">Recepción de Invitados</h3>
+                        <p class="text-muted mb-0">Bienvenida y Coctel</p>
+                        <small class="text-primary fw-bold">20:00 HRS</small>
+                    </div>
+                    <div class="col-md-2 text-center d-none d-md-block position-relative">
+                        <div class="timeline-dot bg-primary text-white shadow">
+                            <i class="bi bi-people-fill"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ps-md-4 d-none d-md-block"></div>
+                </div>
+    
+                <div class="row g-0 align-items-center mb-5 timeline-row">
+                    <div class="col-md-5 pe-md-4 d-none d-md-block"></div>
+                    <div class="col-md-2 text-center d-none d-md-block position-relative">
+                        <div class="timeline-dot bg-secondary text-white shadow">
+                            <i class="bi bi-layout-text-sidebar-reverse"></i> </div>
+                    </div>
+                    <div class="col-md-5 text-md-start text-center ps-md-4" data-aos="fade-left">
+                        <h3 class="h4">Cena</h3>
+                        <p class="text-muted mb-0">Disfrutemos juntos</p>
+                        <small class="text-secondary fw-bold">21:00 HRS</small>
+                    </div>
+                </div>
+    
+                <div class="row g-0 align-items-center timeline-row">
+                    <div class="col-md-5 text-md-end text-center pe-md-4" data-aos="fade-right">
+                        <h3 class="h4">¡A Bailar!</h3>
+                        <p class="text-muted mb-0">Música y Fiesta</p>
+                        <small class="text-primary fw-bold">22:30 HRS - Fin</small>
+                    </div>
+                    <div class="col-md-2 text-center d-none d-md-block position-relative">
+                        <div class="timeline-dot bg-primary text-white shadow">
+                            <i class="bi bi-music-note-beamed"></i>
+                        </div>
+                    </div>
+                    <div class="col-md-5 ps-md-4 d-none d-md-block"></div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="regalos" class="bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-down">Mesa de Regalos</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    Su presencia es nuestro mejor regalo, pero si desean tener un detalle con nosotros, 
+                    les compartimos algunas opciones:
+                </p>
+            </div>
+    
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-5 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+                    <div class="gift-card text-center p-5 border-0 shadow-sm h-100">
+                        <div class="icon-box mb-4 text-primary">
+                            <i class="bi bi-gift-fill display-4"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Liverpool</h3>
+                        <p class="text-muted mb-4">Número de evento: <strong>12345678</strong></p>
+                        <a href="https://mesaderegalos.liverpool.com.mx" target="_blank" class="btn btn-outline-dark px-4">
+                            Ir a la Mesa
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="col-md-5 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+                    <div class="gift-card text-center p-5 border-0 shadow-sm h-100">
+                        <div class="icon-box mb-4 text-primary">
+                            <i class="bi bi-box2-heart-fill display-4"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Amazon</h3>
+                        <p class="text-muted mb-4">Busca nuestra lista de bodas</p>
+                        <a href="#" target="_blank" class="btn btn-outline-dark px-4">
+                            Ver Lista
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="col-md-5 col-lg-4" data-aos="flip-left" data-aos-delay="400">
+                    <div class="gift-card text-center p-5 border-0 shadow-sm h-100 position-relative overflow-hidden">
+                        <div class="ribbon">Luna de Miel</div>
+                        
+                        <div class="icon-box mb-4 text-primary">
+                            <i class="bi bi-airplane-engines-fill display-4"></i>
+                        </div>
+                        <h3 class="h4 mb-3">Lluvia de Sobres</h3>
+                        <p class="text-muted small mb-4">
+                            Si prefieren hacernos un regalo en efectivo para nuestra luna de miel.
+                        </p>
+                        <button type="button" class="btn btn-primary text-white px-4" data-bs-toggle="modal" data-bs-target="#bankModal">
+                            Ver Datos Bancarios
+                        </button>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="hospedaje" class="bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title" data-aos="fade-up">Hospedaje Sugerido</h2>
+                <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                    El evento será en <strong>Santiago, N.L.</strong> (Pueblo Mágico). 
+                    Les recomendamos hospedarse en la zona para evitar traslados largos.
+                </p>
+            </div>
+    
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm hotel-card">
+                        <div class="position-relative">
+                            <img src="img/hotel1.jpg" class="card-img-top" alt="Hotel Las Palomas">
+                            <span class="badge bg-warning text-dark position-absolute top-0 end-0 m-3">
+                                <i class="bi bi-star-fill"></i> Boutique
+                            </span>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h3 class="h5 card-title fw-bold">Hotel Las Palomas</h3>
+                            <p class="text-muted small mb-3"><i class="bi bi-geo-alt"></i> Centro de Santiago</p>
+                            <p class="card-text text-secondary">
+                                Ubicado en el corazón del Pueblo Mágico. Ideal para vivir la experiencia completa y turística de la zona.
+                            </p>
+                            <hr class="my-4 opacity-25">
+                            <div class="d-grid">
+                                <a href="https://laspalomasdesantiago.com/" target="_blank" class="btn btn-outline-dark">Ver Hotel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm hotel-card">
+                        <div class="position-relative">
+                            <img src="img/hotel2.jpg" class="card-img-top" alt="Gamma Santiago">
+                            <span class="badge bg-primary position-absolute top-0 end-0 m-3">
+                                <i class="bi bi-star-fill"></i> 4 Estrellas
+                            </span>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h3 class="h5 card-title fw-bold">Gamma Rincón de Santiago</h3>
+                            <p class="text-muted small mb-3"><i class="bi bi-geo-alt"></i> Carretera Nacional</p>
+                            <p class="card-text text-secondary">
+                                Excelente ubicación sobre la carretera. Acceso rápido a la Quinta San Jorge y muy cómodo.
+                            </p>
+                            <hr class="my-4 opacity-25">
+                             <div class="d-grid">
+                                <a href="https://www.fiestamericanatravelty.com/gamma-hoteles/hoteles/gamma-monterrey-rincon-de-santiago" target="_blank" class="btn btn-outline-dark">Ver Hotel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm hotel-card">
+                        <div class="position-relative">
+                            <img src="img/hotel3.jpg" class="card-img-top" alt="Bahía Escondida">
+                            <span class="badge bg-success position-absolute top-0 end-0 m-3">
+                                <i class="bi bi-tree-fill"></i> Resort
+                            </span>
+                        </div>
+                        <div class="card-body text-center p-4">
+                            <h3 class="h5 card-title fw-bold">Bahía Escondida</h3>
+                            <p class="text-muted small mb-3"><i class="bi bi-geo-alt"></i> Presa La Boca</p>
+                            <p class="card-text text-secondary">
+                                Hotel estilo resort con albercas y vistas a la presa. Perfecto si vienen en familia todo el fin de semana.
+                            </p>
+                            <hr class="my-4 opacity-25">
+                             <div class="d-grid">
+                                <a href="https://www.bahiaescondida.com/" target="_blank" class="btn btn-outline-dark">Ver Hotel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+            
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8 text-center" data-aos="zoom-in">
+                    <p class="text-muted mb-2">¿Vienen en grupo grande?</p>
+                    <a href="https://www.airbnb.mx/s/Santiago--Nuevo-León--México/homes" target="_blank" class="btn btn-link text-dark text-decoration-none border rounded-pill px-4 py-2">
+                        <i class="bi bi-house-heart-fill text-danger me-2"></i> Buscar Quintas o Casas en Airbnb
+                    </a>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <div class="modal fade" id="bankModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4 border-0 shadow">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <i class="bi bi-bank display-1 text-primary mb-3"></i>
+                    <h3 class="mb-3">Datos Bancarios</h3>
+                    <p class="text-muted">A nombre de: <strong>Jose Alfredo Elizondo Arizpe</strong></p>
+                    
+                    <div class="bg-light p-3 rounded mb-3">
+                        <p class="mb-1 small text-uppercase fw-bold text-muted">Banco</p>
+                        <p class="fs-5 mb-0">BBVA</p>
+                    </div>
+                    
+                    <div class="bg-light p-3 rounded mb-3 position-relative">
+                        <p class="mb-1 small text-uppercase fw-bold text-muted">CLABE</p>
+                        <p class="fs-5 mb-0" id="clabeText">012580004623026674</p>
+                        <button class="btn btn-sm btn-link position-absolute top-0 end-0 text-decoration-none" onclick="copiarClabe()">
+                            <i class="bi bi-clipboard"></i> Copiar
+                        </button>
+                    </div>
+    
+                    <p class="small text-muted fst-italic mt-3">¡Gracias por ayudarnos a construir nuestro sueño!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="rsvp" class="bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="section-title" data-aos="fade-down">Acompáñanos</h2>
+                    <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100">
+                        Queremos compartir este gran día contigo. Por favor déjanos tus datos para 
+                        contactarte y confirmar tu asistencia formalmente más adelante.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card border-0 shadow-lg p-4 p-md-5 rounded-4">
+                        <form id="rsvpForm" method="POST"> <div class="form-floating mb-4">
+                            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                            <label for="nombre">Nombre Completo</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="WhatsApp" required>
+                            <label for="telefono">Teléfono / WhatsApp</label>
+                        </div>
+                        <div class="form-floating mb-4">
+                            <textarea class="form-control" placeholder="Mensaje" id="mensaje" name="mensaje" style="height: 100px"></textarea>
+                            <label for="mensaje">Mensaje</label>
+                        </div>
+                    
+                        <div class="d-grid">
+                            <button type="submit" id="btnEnviar" class="btn btn-primary btn-lg rounded-pill text-white shadow-sm">
+                                Enviar mis datos
+                            </button>
+                        </div>
+                        
+                        <div id="mensajeExito" class="alert alert-success mt-3 text-center d-none">
+                            <i class="bi bi-check-circle-fill"></i> ¡Gracias! Tus datos se guardaron correctamente.
+                        </div>
+                        <div id="mensajeError" class="alert alert-danger mt-3 text-center d-none">
+                            <i class="bi bi-exclamation-triangle-fill"></i> Hubo un error, inténtalo de nuevo.
+                        </div>
+                    
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contacto" class="bg-dark text-white text-center">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <i class="bi bi-chat-heart-fill display-4 mb-3 text-warning"></i>
+                    <h2 class="h3 mb-3">¿Tienes alguna duda?</h2>
+                    <p class="text-white-50 mb-4">
+                        Si necesitas información sobre hoteles, ubicación o cualquier otro detalle, 
+                        no dudes en escribirnos.
+                    </p>
+                    
+                    <a href="https://wa.me/5218100000000?text=Hola,%20tengo%20una%20duda%20sobre%20la%20boda" 
+                       target="_blank" 
+                       class="btn btn-outline-light btn-lg rounded-pill px-5">
+                        <i class="bi bi-whatsapp me-2"></i> Contactar por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="bg-black text-white-50 text-center py-3">
+        <small>&copy; 2026 Carolina & Jose. Nos vemos en Santiago.</small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Inicializar las animaciones
+  AOS.init({
+    duration: 1000, // Duración de la animación en milisegundos
+    once: true      // Que solo se anime una vez al bajar, no cada vez que subas y bajes
+  });
+</script>
+<script src="js/scripts.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>

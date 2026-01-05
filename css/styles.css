@@ -1,0 +1,436 @@
+/* Estilos para la cuenta regresiva V4 (Perfeccionada) */
+.countdown-item {
+    background: rgba(0, 0, 0, 0.6); 
+    
+    /* CAMBIO 1: Padding vertical de 10px, pero 0 a los lados. 
+       Esto le da todo el espacio horizontal al número para centrarse. */
+    padding: 10px 0; 
+    
+    border-radius: 8px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden; 
+    
+    /* CAMBIO 2: Aseguramos que la caja ocupe el ancho de su columna */
+    width: 100%;
+    
+    /* CAMBIO 3: Flexbox para centrado absoluto (horizontal y vertical) */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countdown-number {
+    font-family: 'Courier New', monospace;
+    font-weight: 700;
+    line-height: 1;
+    
+    /* CAMBIO 4: Ajustamos el tamaño máximo. 
+       Bajamos de 3rem a 2.5rem para que el 236 respire en escritorio. */
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem); 
+    
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    
+    /* Evita cualquier margen extraño del navegador */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.countdown-item p {
+    font-size: 0.75rem;
+    margin-top: 5px;
+    letter-spacing: 2px; /* Un poco más de espacio entre letras para elegancia */
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* --- TIMELINE (ITINERARIO) --- */
+
+/* La línea vertical central (solo visible en pantallas medianas hacia arriba) */
+.timeline {
+    padding: 20px 0;
+}
+
+/* Dibujamos la línea gris */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #e9ecef; /* Color gris suave */
+    transform: translateX(-50%);
+}
+
+/* El círculo central (Icono) */
+.timeline-dot {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 2; /* Importante para que quede encima de la línea */
+    background-color: #fff; /* Respaldo */
+    border: 4px solid #fff; /* Borde blanco para separarlo visualmente de la línea */
+}
+
+/* RESPONSIVIDAD: Ajustes para Celular (Móvil) */
+@media (max-width: 768px) {
+    /* Ocultamos la línea central vertical en celular porque todo va uno debajo de otro */
+    .timeline::before {
+        display: none;
+    }
+    
+    /* Damos espacio entre bloques */
+    .timeline-row {
+        margin-bottom: 40px !important;
+        /* Una pequeña línea divisoria horizontal entre eventos en celular */
+        border-bottom: 1px dashed #ddd; 
+        padding-bottom: 20px;
+    }
+    
+    .timeline-row:last-child {
+        border-bottom: none;
+    }
+}
+
+/* --- COLORES PERSONALIZADOS (Tema Boda Elegante) --- */
+/* Esto reemplaza el azul default de Bootstrap por un Dorado/Arena */
+.bg-primary {
+    background-color: #c5a059 !important; 
+}
+.text-primary {
+    color: #c5a059 !important;
+}
+
+/* Esto reemplaza el gris de Bootstrap por un tono oscuro/carbón */
+.bg-secondary {
+    background-color: #2c3e50 !important; 
+}
+.text-secondary {
+    color: #2c3e50 !important;
+}
+
+/* --- SECCIÓN REGALOS --- */
+
+.gift-card {
+    background: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px; /* Bordes más suaves */
+}
+
+/* Efecto al pasar el mouse: la tarjeta flota un poco */
+.gift-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+.icon-box {
+    /* Color dorado suave para los iconos */
+    color: #c5a059; 
+}
+
+/* RIBBON (La cintita de "Luna de Miel") */
+.ribbon {
+    position: absolute;
+    top: 20px;
+    right: -35px;
+    background: #c5a059;
+    color: white;
+    padding: 5px 40px;
+    transform: rotate(45deg);
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- SECCIÓN HOSPEDAJE --- */
+
+.hotel-card {
+    transition: all 0.3s ease;
+    overflow: hidden; 
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+/* Efecto Zoom en la imagen del hotel */
+.hotel-card img {
+    transition: transform 0.5s ease;
+    height: 200px;
+    object-fit: cover; 
+}
+
+.hotel-card:hover img {
+    transform: scale(1.05); 
+}
+
+.badge {
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    padding: 0.5em 0.8em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* --- SECCIÓN FORMULARIO RSVP --- */
+
+.form-control {
+    border: none;
+    border-bottom: 2px solid #eee; /* Solo línea abajo */
+    border-radius: 0; /* Cuadrado abajo */
+    background-color: transparent;
+    padding-left: 0;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-bottom-color: #c5a059; /* Dorado al escribir */
+    background-color: transparent;
+}
+
+/* Ajuste de las etiquetas flotantes */
+.form-floating > label {
+    padding-left: 0;
+    color: #999;
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: #c5a059;
+    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+/* Botón de envío */
+.btn-primary {
+    /* Mantenemos el dorado que configuramos antes */
+    padding: 12px 30px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(197, 160, 89, 0.4);
+}
+
+/* --- GALERÍA MASONRY --- */
+
+.masonry-gallery {
+    /* En pantallas grandes, 3 columnas */
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.masonry-item {
+    /* Evita que una foto se parta a la mitad entre columnas */
+    break-inside: avoid;
+    margin-bottom: 20px;
+    position: relative; /* Para el overlay */
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.masonry-item img {
+    width: 100%; /* Que llene la columna */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Efecto Hover: Zoom y Oscurecer */
+.masonry-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay con corazón al pasar el mouse */
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3); /* Fondo negro semitransparente */
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-size: 2rem;
+    pointer-events: none; /* Deja pasar el clic a la imagen */
+}
+
+.masonry-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* RESPONSIVIDAD */
+@media (max-width: 992px) {
+    .masonry-gallery {
+        column-count: 2; /* Tablet: 2 columnas */
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-gallery {
+        column-count: 1; /* Celular: 1 columna */
+    }
+}
+
+/* --- LOGO NAVBAR --- */
+
+.logo-img {
+    /* Altura máxima para que quepa bien en la barra.
+       Prueba entre 35px y 50px dependiendo del diseño de tu logo */
+    height: 45px; 
+    
+    width: auto; /* Mantiene la proporción siempre */
+    display: block; /* Elimina espacios fantasma debajo de imágenes inline */
+    transition: transform 0.3s ease;
+}
+
+/* Un pequeño efecto de zoom al pasar el mouse sobre el logo */
+.navbar-brand:hover .logo-img {
+    transform: scale(1.05);
+}
+
+/* AJUSTE RESPONSIVO (Opcional) */
+/* Si en celular el logo se ve muy grande, puedes reducirlo aquí */
+@media (max-width: 576px) {
+    .logo-img {
+        height: 35px;
+    }
+}
+
+/* --- LOGO PRINCIPAL (HERO) --- */
+
+.hero-logo {
+    /* Tamaño base para celulares */
+    height: 120px; 
+    width: auto;
+    
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Sombra suave (si la dejaste) */
+    /* filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));*/
+    
+    /* --- NUEVA LÍNEA: TRANSPARENCIA --- */
+    /* 1.0 = Totalmente visible */
+    /* 0.5 = 50% transparente */
+    /* 0.0 = Invisible */
+    opacity: 0.4 !important;  /* <-- Ajusta este valor a tu gusto */
+}
+
+/* RESPONSIVIDAD: Pantallas medianas y grandes (Tablet/Laptop) */
+/* A partir de 768px, el logo crece */
+@media (min-width: 768px) {
+    .hero-logo {
+        height: 300px; /* Tamaño imponente en escritorio */
+    }
+}
+
+/* --- NAVEGACIÓN PREMIUM (Glassmorphism) --- */
+
+.custom-navbar {
+    /* Fondo blanco semitransparente (85%) */
+    background-color: rgba(255, 255, 255, 0.85);
+    
+    /* EL EFECTO VIDRIO: Difumina lo que pasa por detrás */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* Para Safari */
+    
+    /* Sombra suave inferior */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    
+    transition: all 0.3s ease;
+    padding: 10px 0; /* Un poco más de aire arriba y abajo */
+}
+
+/* Estilo de los Enlaces */
+.custom-navbar .nav-link {
+    color: #444 !important; /* Gris oscuro elegante */
+    font-size: 0.85rem;     /* Letra pequeña y fina */
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;    /* Espaciado entre letras (Tracking) */
+    padding: 0 15px !important;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Efecto Hover: Línea dorada que aparece abajo */
+.custom-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #c5a059; /* Tu color dorado */
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.custom-navbar .nav-link:hover {
+    color: #c5a059 !important;
+}
+
+.custom-navbar .nav-link:hover::after {
+    width: 80%; /* La línea crece al pasar el mouse */
+}
+
+/* Enlace activo (ScrollSpy) */
+.custom-navbar .nav-link.active {
+    color: #c5a059 !important;
+}
+.custom-navbar .nav-link.active::after {
+    width: 80%;
+}
+
+/* Botón RSVP Personalizado */
+.btn-rsvp {
+    background-color: #c5a059;
+    color: white !important;
+    padding: 8px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(197, 160, 89, 0.4);
+}
+
+.btn-rsvp:hover {
+    background-color: #2c3e50; /* Cambia a oscuro al pasar el mouse */
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+/* AJUSTE PARA MÓVIL */
+/* Asegura que el menú desplegable tenga fondo sólido para que se lea bien */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .custom-navbar .nav-link {
+        padding: 10px 0 !important;
+        text-align: center;
+    }
+}
